@@ -25,8 +25,7 @@ Right Now WASP is designed to work with only [LoRa](http://www.heltec.cn/project
   `npm install moment`
   ### Serial Port
   `npm install serialport`
-  ### Random Number
-  `npm install random-number`
+  
 - ## Arduino-IDE
      ### Libraries:
       - ESP-32
