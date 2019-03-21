@@ -1,17 +1,11 @@
 var moment = require('moment');
 var http = require('http');
-var rn = require('random-number');
 var SerialPort = require('serialport');
+
 var Readline = SerialPort.parsers.Readline;
 var port = new SerialPort('COM3');
 var parser = port.pipe(new Readline());
 var packet;
-
-var options = {
-    // example input , yes negative values do work
-    min:1
-  , max:30
-  ,integer:true  }
 
 var app = http.createServer(function(req,res){
  res.setHeader('Content-Type', 'application/json');
@@ -34,7 +28,7 @@ var app = http.createServer(function(req,res){
 
     var timenow=moment().format('LTS');
     res.end(JSON.stringify({ time: timenow , temp1: num1 , humi1: hum1 , temp2: num2 , humi2: hum2 , temp3: num3 , humi3: hum3}));
-    //res.end(JSON.stringify({ time: timenow , temp1: num1 , humi1: hum1}));
+    
     console.log(timenow+" "+num1+" "+hum1+" "+num2+" "+hum2+" "+num3+" "+hum3);
     i++;
     }

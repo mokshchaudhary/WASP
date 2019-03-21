@@ -45,26 +45,34 @@ void loop()
   Heltec.display->clear();
   Heltec.display->setTextAlignment(TEXT_ALIGN_LEFT);
   Heltec.display->setFont(ArialMT_Plain_10);
-  //DHT Functioning
 
+  //DHT Functioning
   delay(1000);
 
+  //Example:
   h = dht.readHumidity();
   // Read temperature as Celsius (the default)
   t = dht.readTemperature();
 
-int temp2 = random(0,100);
-int hum2 = random(0,100);
+  // Change these value 
+  // by default set to generate ran number
+  // add or change these to get value from sensors 
 
-int temp3 = random(0,100);
-int hum3 = random(0,100);
+  int a = random(0,100);
+  int b = random(0,100); 
+
+  int c = random(0,100);
+  int d = random(0,100);
    
   Heltec.display->drawString(0, 0, String(t));
   Heltec.display->drawString(45, 0, String(h));
-   Heltec.display->drawString(0, 10, String(temp2));
-  Heltec.display->drawString(45, 10, String(hum2));
-   Heltec.display->drawString(0, 20, String(temp3));
-  Heltec.display->drawString(45, 20, String(hum3));
+  
+  Heltec.display->drawString(0, 10, String(a));
+  Heltec.display->drawString(45, 10, String(b));
+  
+  Heltec.display->drawString(0, 20, String(c));
+  Heltec.display->drawString(45, 20, String(d));
+  
   Heltec.display->drawString(0, 50, "Sent");   
   Heltec.display->display();
 
@@ -73,7 +81,7 @@ int hum3 = random(0,100);
   // send packet
   Heltec.LoRa.beginPacket();
   // Heltec.LoRa.print();
-  Heltec.LoRa.print(String(t)+","+String(h)+","+String(temp2)+","+String(hum2)+","+String(temp3)+","+String(hum3));
+  Heltec.LoRa.print(String(t)+","+String(h)+","+String(a)+","+String(b)+","+String(c)+","+String(d));
   Heltec.LoRa.endPacket();
 
   counter++;
