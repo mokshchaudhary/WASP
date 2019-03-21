@@ -1,7 +1,7 @@
 # WASP
 ![wasp-header](https://i.imgur.com/0ukVt3a.jpg)
 </br>
-WASP aims to become a framework for IoT based devices and be able to provide non-technical (or just lazy devs) a backend for their IoT devices so they can focus on solving the problem instead of the worrying about the backend. We intend to add AI modeling to the framework to provide alerts and in-depth analysis of the data.</br>Project Status: Alpha
+WASP aims to become a framework for IoT based devices and be able to provide non-technical (or just lazy devs) a backend for their IoT devices so they can focus on solving the problem instead of the worrying about the backend. We intend to add AI modeling to the framework to provide alerts and in-depth analysis of the data.</br><b>Project Status: Alpha</b>
 </br>
 ### Wasp uses 2 modules:
 - Wasp Mesh
