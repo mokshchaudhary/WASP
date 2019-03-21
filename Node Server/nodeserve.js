@@ -3,7 +3,7 @@ var http = require('http');
 var SerialPort = require('serialport');
 
 var Readline = SerialPort.parsers.Readline;
-var port = new SerialPort('COM3');
+var port = new SerialPort('COM3'); // Change this to your sender's port
 var parser = port.pipe(new Readline());
 var packet;
 
